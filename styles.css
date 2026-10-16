@@ -16,3 +16,27 @@ aside h2{font-size:clamp(21px,1.9vw,30px)}
 .motto{font-family:Georgia,serif;font-size:23px;border-bottom:2px solid var(--amber);padding-bottom:8px}
 @media(max-width:1000px){.layout{grid-template-columns:1fr}header{min-height:110px}header .emblem{width:145px;height:110px}header h1{font-size:42px}.reference-hero{min-height:0}.navbutton{min-height:64px}}
 @media(max-width:600px){header{gap:10px;min-height:86px}header .emblem{width:95px;height:74px}header h1{font-size:27px}header p{font-size:10px;letter-spacing:1px}.reference-hero{aspect-ratio:1180/480;min-height:0}.reference-status{top:7px;left:7px;font-size:6px;letter-spacing:.5px;padding:4px 6px}.stagebar{font-size:9px;min-height:38px}}
+
+/* Ajuste integral de composición al esquema de referencia. */
+body{background:#031a2d}
+.shell{max-width:1672px;padding:0 2.15% 22px}
+header{margin:0 -2.25% 0;width:104.5%;height:auto;min-height:0;aspect-ratio:1672/195;background:url("assets/borrador-aprobado.svg") left top/100% auto no-repeat;display:block}
+header>div,header>.edition{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+header .brand{position:absolute;left:2%;top:7%;width:16%;height:86%}
+header .emblem{background:none;width:100%;height:100%;font-size:0}
+.layout{grid-template-columns:minmax(0,1180fr) minmax(0,405fr);gap:1.8%;align-items:start}
+.stage{align-self:start;border-radius:16px;border:1px solid #8ba7b9}
+.reference-hero{width:100%;flex:none;aspect-ratio:1180/480}
+.stagebar{margin-top:0;min-height:0;height:clamp(38px,3.3vw,55px);padding:0 18px;align-items:center}
+aside{min-width:0}aside h2{font-size:clamp(17px,1.85vw,31px);margin:5px 0 11px;white-space:nowrap}
+.accent{margin-bottom:15px}.navbutton{min-height:0;height:clamp(46px,4.05vw,68px);padding:8px 15px;font-size:clamp(12px,1.23vw,20px);gap:14px;border-radius:11px}
+nav{gap:clamp(8px,.8vw,13px)}.icon{font-size:clamp(23px,2.4vw,38px);width:35px}
+footer{position:relative;margin-top:20px;align-items:flex-start;min-height:170px;isolation:isolate}
+footer:before{content:"";position:absolute;inset:25px -2.25% -20px;z-index:-1;background:url("assets/blueprint.svg") center bottom/100% auto no-repeat;opacity:.8;pointer-events:none}
+.actions{max-width:46%;gap:12px}.actions>.primary{min-height:64px;border-radius:17px;font-size:clamp(14px,1.5vw,24px);padding:15px 26px}
+#fullscreen{width:62px;height:62px;border-radius:50%;font-size:32px;padding:0}
+#kiosk{font-size:11px;padding:7px 10px}
+.motto{align-self:flex-end;position:absolute;left:36%;bottom:0;max-width:none;width:41%;text-align:center;font-style:italic;font-size:clamp(17px,2vw,32px);font-weight:normal;transform:rotate(-4deg)}
+.qr{margin-left:auto;width:25%;min-height:132px;font-size:clamp(12px,1.2vw,20px);justify-content:center}.qr img{width:40%;height:auto;aspect-ratio:1}
+@media(max-width:1000px){.shell{padding:0 18px 20px}.layout{grid-template-columns:1fr;gap:24px}header{margin-bottom:15px}nav{grid-template-columns:1fr 1fr}.navbutton{height:66px;font-size:16px}aside h2{font-size:25px}.actions{max-width:65%}.qr{width:31%}.motto{display:none}footer{min-height:155px}}
+@media(max-width:600px){header{background:none;aspect-ratio:auto;min-height:95px;margin:0 0 15px;width:100%;display:flex;gap:14px}header>div{position:static;clip-path:none;width:auto;height:auto;overflow:visible;text-align:left}header h1{font-size:25px;letter-spacing:-1px}header p{font-size:10px;letter-spacing:1px}header .brand{position:static;width:90px;height:74px;flex:none}header .emblem{width:90px;height:74px;background:url("assets/borrador-aprobado.svg") 2.74% 2.32%/796.2% 570.3% no-repeat}nav{grid-template-columns:1fr}.navbutton{height:65px;font-size:17px}.actions{max-width:100%;width:100%}.actions>.primary{min-height:55px;font-size:16px;padding:12px 17px}#fullscreen{height:52px;width:52px}footer{gap:18px}.qr{width:100%;font-size:18px}.qr img{width:105px}.reference-status{font-size:6px}.stagebar{padding:0 10px}}
