@@ -2,10 +2,10 @@
 /* Composición del borrador aprobado; portada ilustrativa hasta incorporar el video real. */
 header{position:relative;justify-content:flex-start;min-height:155px}
 header>div{flex:1;text-align:center}
-header .emblem{width:205px;height:155px;background-image:url("assets/borrador-aprobado.svg");background-size:796.2% 570.3%;background-position:2.74% 2.32%;font-size:0;color:transparent;text-shadow:none}
+header .emblem{width:205px;height:155px;background-image:url("assets/referencia-v2.svg");background-size:796.2% 570.3%;background-position:2.74% 2.32%;font-size:0;color:transparent;text-shadow:none}
 header h1{font-size:clamp(32px,4.5vw,76px);font-weight:900}
 header p{letter-spacing:6px}
-.reference-hero{aspect-ratio:1180/480;min-height:0;padding:0;background-image:url("assets/borrador-aprobado.svg");background-size:141.695% 196.04%;background-position:7.317% 42.516%;background-repeat:no-repeat}
+.reference-hero{aspect-ratio:1180/480;min-height:0;padding:0;background-image:url("assets/referencia-v2.svg");background-size:141.695% 196.04%;background-position:7.317% 42.516%;background-repeat:no-repeat}
 .reference-status{position:absolute;top:15px;left:15px;background:#06192be8;padding:7px 11px;border-radius:4px;font-size:9px;letter-spacing:1.5px;color:#fff}
 .stagebar{min-height:51px;background:linear-gradient(#142332,#081321);border-top:1px solid #62839b}
 .shell{padding-top:14px}
@@ -20,7 +20,7 @@ aside h2{font-size:clamp(21px,1.9vw,30px)}
 /* Ajuste integral de composición al esquema de referencia. */
 body{background:#031a2d}
 .shell{max-width:1672px;padding:0 2.15% 22px}
-header{margin:0 -2.25% 0;width:104.5%;height:auto;min-height:0;aspect-ratio:1672/195;background:url("assets/borrador-aprobado.svg") left top/100% auto no-repeat;display:block}
+header{margin:0 -2.25% 0;width:104.5%;height:auto;min-height:0;aspect-ratio:1672/195;background:url("assets/referencia-v2.svg") left top/100% auto no-repeat;display:block}
 header>div,header>.edition{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 header .brand{position:absolute;left:2%;top:7%;width:16%;height:86%}
 header .emblem{background:none;width:100%;height:100%;font-size:0}
@@ -39,4 +39,6 @@ footer:before{content:"";position:absolute;inset:25px -2.25% -20px;z-index:-1;ba
 .motto{align-self:flex-end;position:absolute;left:36%;bottom:0;max-width:none;width:41%;text-align:center;font-style:italic;font-size:clamp(17px,2vw,32px);font-weight:normal;transform:rotate(-4deg)}
 .qr{margin-left:auto;width:25%;min-height:132px;font-size:clamp(12px,1.2vw,20px);justify-content:center}.qr img{width:40%;height:auto;aspect-ratio:1}
 @media(max-width:1000px){.shell{padding:0 18px 20px}.layout{grid-template-columns:1fr;gap:24px}header{margin-bottom:15px}nav{grid-template-columns:1fr 1fr}.navbutton{height:66px;font-size:16px}aside h2{font-size:25px}.actions{max-width:65%}.qr{width:31%}.motto{display:none}footer{min-height:155px}}
-@media(max-width:600px){header{background:none;aspect-ratio:auto;min-height:95px;margin:0 0 15px;width:100%;display:flex;gap:14px}header>div{position:static;clip-path:none;width:auto;height:auto;overflow:visible;text-align:left}header h1{font-size:25px;letter-spacing:-1px}header p{font-size:10px;letter-spacing:1px}header .brand{position:static;width:90px;height:74px;flex:none}header .emblem{width:90px;height:74px;background:url("assets/borrador-aprobado.svg") 2.74% 2.32%/796.2% 570.3% no-repeat}nav{grid-template-columns:1fr}.navbutton{height:65px;font-size:17px}.actions{max-width:100%;width:100%}.actions>.primary{min-height:55px;font-size:16px;padding:12px 17px}#fullscreen{height:52px;width:52px}footer{gap:18px}.qr{width:100%;font-size:18px}.qr img{width:105px}.reference-status{font-size:6px}.stagebar{padding:0 10px}}
+@media(max-width:600px){header{background:none;aspect-ratio:auto;min-height:95px;margin:0 0 15px;width:100%;display:flex;gap:14px}header>div{position:static;clip-path:none;width:auto;height:auto;overflow:visible;text-align:left}header h1{font-size:25px;letter-spacing:-1px}header p{font-size:10px;letter-spacing:1px}header .brand{position:static;width:90px;height:74px;flex:none}header .emblem{width:90px;height:74px;background:url("assets/referencia-v2.svg") 2.74% 2.32%/796.2% 570.3% no-repeat}nav{grid-template-columns:1fr}.navbutton{height:65px;font-size:17px}.actions{max-width:100%;width:100%}.actions>.primary{min-height:55px;font-size:16px;padding:12px 17px}#fullscreen{height:52px;width:52px}footer{gap:18px}.qr{width:100%;font-size:18px}.qr img{width:105px}.reference-status{font-size:6px}.stagebar{padding:0 10px}}
+
+.stage{min-width:0;max-width:100%;overflow:hidden;isolation:isolate}.reference-hero{overflow:hidden;background-clip:padding-box}video{display:block;max-width:100%;object-fit:contain}.motto{width:35%;left:36%}
