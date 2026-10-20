@@ -1,0 +1,13 @@
+const slides=[
+{src:'assets/portal-1.svg',title:'Bienvenidos al portal CET 33',description:'Una puerta de entrada a la información y los espacios de nuestra escuela.'},
+{src:'assets/portal-2.svg',title:'Aulas virtuales y biblioteca',description:'Recursos para Dibujo Técnico, Hormigón Armado, Impresión 3D y otras materias.'},
+{src:'assets/portal-3.svg',title:'Nuestra comunidad educativa',description:'Proyectos, participación estudiantil y vínculos con la comunidad.'}
+];let index=0,timer=null;const image=document.querySelector('#slide'),dots=document.querySelector('.dots');
+slides.forEach((slide,i)=>{const button=document.createElement('button');button.textContent=String(i+1);button.setAttribute('aria-label',slide.title);button.onclick=()=>{stop();show(i)};dots.append(button)});
+function show(i){index=(i+slides.length)%slides.length;const s=slides[index];image.src=s.src;image.alt=s.title+' · Vista ilustrativa';document.querySelector('#title').textContent=s.title;document.querySelector('#description').textContent=s.description;document.querySelector('#count').textContent=(index+1)+' / '+slides.length;document.querySelector('#error').hidden=true;[...dots.children].forEach((b,j)=>b.setAttribute('aria-current',String(j===index)))}
+function stop(){clearInterval(timer);timer=null;document.querySelector('#auto').textContent='▶ Recorrido automático';document.querySelector('#auto').setAttribute('aria-pressed','false')}
+document.querySelector('#prev').onclick=()=>{stop();show(index-1)};document.querySelector('#next').onclick=()=>{stop();show(index+1)};
+document.querySelector('#auto').onclick=()=>{if(timer)stop();else{timer=setInterval(()=>show(index+1),7000);document.querySelector('#auto').textContent='Ⅱ Pausar recorrido';document.querySelector('#auto').setAttribute('aria-pressed','true')}};
+document.querySelector('#expand').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.querySelector('.viewer').requestFullscreen()}catch{window.open(slides[index].src,'_blank','noopener')}};
+document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){stop();show(index-1)}if(e.key==='ArrowRight'){stop();show(index+1)}});document.addEventListener('visibilitychange',()=>{if(document.hidden)stop()});image.onerror=()=>document.querySelector('#error').hidden=false;
+let startX;image.addEventListener('touchstart',e=>startX=e.changedTouches[0].screenX,{passive:true});image.addEventListener('touchend',e=>{const delta=e.changedTouches[0].screenX-startX;if(Math.abs(delta)>45){stop();show(index+(delta<0?1:-1))}},{passive:true});show(0);
