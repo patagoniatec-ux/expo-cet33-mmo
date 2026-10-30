@@ -42,3 +42,12 @@ footer:before{content:"";position:absolute;inset:25px -2.25% -20px;z-index:-1;ba
 @media(max-width:600px){header{background:none;aspect-ratio:auto;min-height:95px;margin:0 0 15px;width:100%;display:flex;gap:14px}header>div{position:static;clip-path:none;width:auto;height:auto;overflow:visible;text-align:left}header h1{font-size:25px;letter-spacing:-1px}header p{font-size:10px;letter-spacing:1px}header .brand{position:static;width:90px;height:74px;flex:none}header .emblem{width:90px;height:74px;background:url("assets/referencia-v2.svg") 2.74% 2.32%/796.2% 570.3% no-repeat}nav{grid-template-columns:1fr}.navbutton{height:65px;font-size:17px}.actions{max-width:100%;width:100%}.actions>.primary{min-height:55px;font-size:16px;padding:12px 17px}#fullscreen{height:52px;width:52px}footer{gap:18px}.qr{width:100%;font-size:18px}.qr img{width:105px}.reference-status{font-size:6px}.stagebar{padding:0 10px}}
 
 .stage{min-width:0;max-width:100%;overflow:hidden;isolation:isolate}.reference-hero{overflow:hidden;background-clip:padding-box}video{display:block;max-width:100%;object-fit:contain}.motto{width:35%;left:36%}
+
+/* Plano completo de la muestra: conservar todas las referencias visibles. */
+.map-actions{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
+.map-actions a{display:inline-block;background:#103148;border:1px solid var(--cyan);padding:13px 18px;border-radius:10px;text-decoration:none;font-weight:bold}
+.map-actions a:hover{background:#174760}
+.map-preview{display:block;text-decoration:none;margin:24px 0}
+.map-preview figure{border:1px solid #456d86}
+.map-preview figure img{display:block;width:100%;height:auto;object-fit:contain;background:white}
+.map-preview figcaption{color:var(--muted)}
