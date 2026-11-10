@@ -1,7 +1,7 @@
 // Editar este archivo para incorporar el material real. Usar rutas relativas.
 window.EXPO = {
- video: "assets/video/visita-central-hidraulica.mp4",
- poster: "",
+ video: "assets/video/presentacion-z33.mp4",
+ poster: "assets/video/presentacion-z33.webp",
  map: "assets/plano/recorrido-2026.webp",
  mapReferences: "assets/plano/referencias-2026.webp",
  mapPdf: "assets/plano/muestra-cet33-2026.pdf",
